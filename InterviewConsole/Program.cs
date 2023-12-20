@@ -10,11 +10,11 @@ namespace InterviewConsole
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             var employeeService = new EmployeeService.EmployeeService();
-            var a = employeeService.GetEmployeeById(1);
-            Console.WriteLine(a);
+            var a = await employeeService.GetEmployeeById(1);
+            await employeeService.EnableEmployee(1, 0);
 
 
             // DataTable dtEmployees = GetQueryResult("SELECT * FROM Employee");
